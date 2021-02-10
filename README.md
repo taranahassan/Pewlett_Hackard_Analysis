@@ -1,5 +1,6 @@
 # Pewlett_Hackard_Analysis
 
+
 ## Overview of the analysis
 
 **PH** *(Pewlett Hackard)*  is preparing itself for the future; they are looking to be proactive to fill any upcoming job vacancies.  For this process they need to review their employee data and determine which employee would be retiring in the near future. <br>
@@ -21,6 +22,8 @@ The following analysis results were created to determine the number of employees
 PostgreSQL 11.10<br>
 pgAdmin 4<br>
 
+
+
 ## Results
 
 By using the above data we extracted related information from each table. New tables with data were created by joining two or more existing tables; queried in SQL to filter the related columns.
@@ -35,4 +38,6 @@ By using the above data we extracted related information from each table. New ta
 
 4.  [mentorship_eligibility.csv](https://github.com/taranahassan/Pewlett_Hackard_Analysis/blob/main/Data/mentorship_eligibility.csv) was the final table that needs to be presented to the CEO.  This table was derived by creating all 3 original tables; Employees, Department Employees and Titles table.  Again, filtering the birth dates from 1952 to 1955 to determine the employees retiring but also by extracting the employees currently still active with PH.  There are a total of 1549 employees that is eligble for the mentorship program.
 
-*All CSV files imported and exported are saved in [Data](https://github.com/taranahassan/Pewlett_Hackard_Analysis/tree/main/Data)*<br>
+***All CSV files imported and exported are saved in [Data](https://github.com/taranahassan/Pewlett_Hackard_Analysis/tree/main/Data)***<br>
+***Schema to create 4 above tables can be accessed in [Queries](https://github.com/taranahassan/Pewlett_Hackard_Analysis/tree/main/Queries)***<br>
+
