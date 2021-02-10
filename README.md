@@ -21,6 +21,6 @@ The following analysis results were created to determine the number of employees
 
 By using the above data we extracted related information from each table. New tables with data were created by joining two or more existing tables; queried in SQL to filter the related columns.
 
-1.  **![retirement_titles.csv]**(https://github.com/taranahassan/Pewlett_Hackard_Analysis/blob/main/Data/retirement_titles.csv) was created by extracting details by joining the Employees and Titles table to query employees' employee number, name, title name and dates held.  We then filtered employees with the birth date between 1952 and 1955 to determine the retiring age.
+1.  **[retirement_titles.csv]**(https://github.com/taranahassan/Pewlett_Hackard_Analysis/blob/main/Data/retirement_titles.csv) was created by extracting details by joining the Employees and Titles table to query employees' employee number, name, title name and dates held.  We then filtered employees with the birth date between 1952 and 1955 to determine the retiring age.
 
 2.  **[!unique_titles.csv]**(https://github.com/taranahassan/Pewlett_Hackard_Analysis/blob/main/Data/unique_titles.csv) was created by removing any duplicate employee names and only keeping their most recent position held at PH.  This table was set by descending order of each employee number and the their most recent job title.
