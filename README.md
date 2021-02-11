@@ -45,7 +45,7 @@ Based on this table it shows 2,9414 Senior Engineers are retiring which is quite
 
 ## Summary
 
-Out of the 4 new data tables created, the mentorship_eligibility table provides more of the information required for the Managers to promote the idea.  However this information can be clarified a bit further, if questions are asked by the CEO.  When looking at the number of 1549 employees retiring soon, still seems like a big chunk of employees that are retiring.  I've created a similar table to mentorship_eligibility but included the department for each employee.  As per the image below, we can see that a Senior Engineer can be valid in different departments.<br>
+Out of the 4 new data tables created, the mentorship_eligibility table provides more of the information required for the Managers to promote the idea.  However this information can be clarified a bit further, if questions are asked by the CEO.  When looking at the number of 1549 employees retiring soon, still seems like a big chunk of employees that are retiring.  I've created a similar table called [mentorship_eligibility1.csv](https://github.com/taranahassan/Pewlett_Hackard_Analysis/blob/main/Data/mentorship_eligibility1.csv) but included the department for each employee.  As per the image below, we can see that a Senior Engineer can be valid in different departments.<br>
 ![retirees_by_department](https://github.com/taranahassan/Pewlett_Hackard_Analysis/blob/main/Images/retirees_by_department.png?raw=true) <br>
 **Schema for this table is [sample_query1.sql](https://github.com/taranahassan/Pewlett_Hackard_Analysis/blob/main/Queries/sample_query1.sql)**<br>
 
