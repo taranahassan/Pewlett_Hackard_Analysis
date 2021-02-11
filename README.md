@@ -14,7 +14,7 @@ Using SQL we were able to create tables and import all the CSV files into a data
 5.  **Salaries** - employee number with associated salaries and their start to end date receiving that salary. <br>
 6.  **Titles** - employee number with associated title and their start to end date holding the title.  <br>
 
-Managers wanted to create a new mentoring program for employees getting ready to retire. This will allow any retirees to step back in a part-time role with in PH and become a mentor to guide the new hired employees by sharing their success and experiences.  Before they can present their idea to the CEO, they require factual results to the show number of employees retiring from each department.
+Managers wanted to create a new mentoring program for employees getting ready to retire. This will allow any retirees to step back in a part-time role with in PH and become a mentor to guide the new hired employees by sharing their success and experiences.  Before they can present their idea to the CEO, they require factual results to show the number of employees retiring from each department.
 
 The following analysis results were created to determine the number of employees per title that will be retiring soon and if they are eligible to participate in the mentorship program.
 
@@ -28,16 +28,29 @@ pgAdmin 4<br>
 
 By using the above data we extracted related information from each table. New tables with data were created by joining two or more existing tables; queried in SQL to filter the related columns.
 
-1.  [retirement_titles.csv](https://github.com/taranahassan/Pewlett_Hackard_Analysis/blob/main/Data/retirement_titles.csv) was created by extracting details by joining the Employees and Titles table to query employees' employee number, name, title name and dates held.  We then filtered employees with the birth date between 1952 and 1955 to determine the retiring age.  The data shows there are 133,776 employess that are retiring, however the employee data pulled show duplicates of some employees holding different positions throughout their career at PH and alot of employees who are no longer working at the company.
+1.  [retirement_titles.csv](https://github.com/taranahassan/Pewlett_Hackard_Analysis/blob/main/Data/retirement_titles.csv) was created by extracting details by joining the Employees and Titles table to query employees' employee number, name, title name and start date at PH.  We then filtered employees with the birth date between 1952 and 1955 to determine the retiring age.  The data shows there are 133,776 employess that are retiring, which a vast number of employees retiring.  However the employee data pulled show duplicates of some employees holding different positions throughout their career at PH and alot of employees who are no longer working at the company.
 
-2.  [unique_titles.csv](https://github.com/taranahassan/Pewlett_Hackard_Analysis/blob/main/Data/unique_titles.csv) was created by removing any duplicate employee names and only keeping their most recent position held at PH.  This table was set by descending order of each employee number and the their most recent job title.  After removing duplicates, the are 90,398 employees with active and non active employees.
+2.  [unique_titles.csv](https://github.com/taranahassan/Pewlett_Hackard_Analysis/blob/main/Data/unique_titles.csv) was created by removing any duplicate employee names and only keeping their most recent position held at PH.  After removing duplicates, there are 90,398 employees which are active and non active employees.  
 
-3.  [retiring_titles.scv](https://github.com/taranahassan/Pewlett_Hackard_Analysis/blob/main/Data/retiring_titles.csv) was created using the **unique_titles** table by grouping employees with the same titles and counting the total number of employees per title. <br>
+3.  [retiring_titles.scv](https://github.com/taranahassan/Pewlett_Hackard_Analysis/blob/main/Data/retiring_titles.csv) was created using the **unique_titles** data by grouping employees with the same titles and counting the total number of employees per title. This data still includes many employees no longer working at the company and therefore this table can be re filtered again to take only active employees in to account.<br>
+Based on this table it shows 2,9414 Senior Engineers are retiring which is quite high but only 2 department managers retiring.  We would get a better picture once we revise this table to understand which departments each title represents.<br>
 ![Total_employees_per_title](https://github.com/taranahassan/Pewlett_Hackard_Analysis/blob/main/Images/Total_employees_per_title.png?raw=true)<br>
 
-
-4.  [mentorship_eligibility.csv](https://github.com/taranahassan/Pewlett_Hackard_Analysis/blob/main/Data/mentorship_eligibility.csv) was the final table that needs to be presented to the CEO.  This table was derived by creating all 3 original tables; Employees, Department Employees and Titles table.  Again, filtering the birth dates from 1952 to 1955 to determine the employees retiring but also by extracting the employees currently still active with PH.  There are a total of 1549 employees that is eligble for the mentorship program.
+4.  [mentorship_eligibility.csv](https://github.com/taranahassan/Pewlett_Hackard_Analysis/blob/main/Data/mentorship_eligibility.csv) was the final table that needs to be presented to the CEO.  This table was derived from all 3 original datas; Employees, Department Employees and Titles table.  Again, filtering the birth dates from 1952 to 1955 to determine the employees retiring but also by extracting the employees currently still active with PH.  There are a total of 1549 employees that is eligble for the mentorship program.  
 
 ***All CSV files imported and exported are saved in [Data](https://github.com/taranahassan/Pewlett_Hackard_Analysis/tree/main/Data)***<br>
 ***Schema to create 4 above tables can be accessed in [Queries](https://github.com/taranahassan/Pewlett_Hackard_Analysis/tree/main/Queries)***<br>
+
+
+
+## Summary
+
+Out of the 4 new data tables created, the mentorship_eligibility table provides more of the information required for the Managers to promote the idea.  However this information can be clarified a bit further, if questions are asked by the CEO.  When looking at the number of 1549 employees retiring soon, still seems like a big chunk of employees that are retiring.  I've created a similar table to mentorship_eligibility but included the department for each employee.  As per the image below, we can see that a Senior Engineer can be valid in different departments.<br>
+![retirees_by_department](https://github.com/taranahassan/Pewlett_Hackard_Analysis/blob/main/Images/retirees_by_department.png?raw=true) <br>
+
+To calculate the total number of employees per department, I created another query for the table below.  This gives a more microscopic view of job vacancies that will be upcoming for each department.  The numbers per department looks a little less overwhelming.   There are a total of 34 job titles within the 9 departments that have upcoming retirees; the Development department leading with 194 Engineer positions that will be available in the near future.<br>
+![total_per_dept](https://github.com/taranahassan/Pewlett_Hackard_Analysis/blob/main/Images/total_per_dept.png?raw=true). <br>
+
+Knowing there are 1549 total employees that are retiring and same number of new employees that need to be hired, parameters can be set for the mentorship eligibility.  Otherwise PH will have 3098 positions to fill; half the employees as replacements and the other half as part time mentorship.  Which would mean 1:1 for every new hire and mentor, assuming all retirees do want to take part in the mentorship program.  This would significantly increase payroll and other expenses within the company.  One criteria can be based on the number of positions an employee held during their tenure at PH.  This shows career growth, expertise and more experience within the retiree.  Positions held can be 2 or more based a specific department and requirements to fullfill the mentorship program.  Another criteria could be capping the number of mentorship positions per department.<br>
+![number_positions_per_retiree](https://github.com/taranahassan/Pewlett_Hackard_Analysis/blob/main/Images/number_positions_per_retiree.png?raw=true)
 
