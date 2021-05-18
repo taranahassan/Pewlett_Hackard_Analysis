@@ -1,4 +1,4 @@
-# Pewlett_Hackard_Analysis
+# Pewlett Hackard Analysis
 
 
 ## Overview of the analysis
@@ -45,14 +45,14 @@ Based on this table it shows 2,9414 Senior Engineers are retiring which is quite
 
 ## Summary
 
-Out of the 4 new data tables created, the mentorship_eligibility table provides more of the information required for the Managers to promote the idea.  However this information can be clarified a bit further, if questions are asked by the CEO.  When looking at the number of 1549 employees retiring soon, still seems like a big chunk of employees that are retiring.  I've created a similar table to mentorship_eligibility but included the department for each employee.  As per the image below, we can see that a Senior Engineer can be valid in different departments.<br>
+Out of the 4 new data tables created, the mentorship_eligibility table provides more of the information required for the Managers to promote the idea.  However this information can be clarified a bit further, if questions are asked by the CEO.  When looking at the number of 1549 employees retiring soon, still seems like a big chunk of employees that are retiring.  I've created a similar table called [mentorship_eligibility1.csv](https://github.com/taranahassan/Pewlett_Hackard_Analysis/blob/main/Data/mentorship_eligibility1.csv) but included the department for each employee.  As per the image below, we can see that a Senior Engineer can be valid in different departments.<br>
 ![retirees_by_department](https://github.com/taranahassan/Pewlett_Hackard_Analysis/blob/main/Images/retirees_by_department.png?raw=true) <br>
-**Schema for this table is [sample_query1.sql](https://github.com/taranahassan/Pewlett_Hackard_Analysis/blob/main/Queries/sample_query1.sql)**<br>
+*Schema for this table is [sample_query1.sql](https://github.com/taranahassan/Pewlett_Hackard_Analysis/blob/main/Queries/sample_query1.sql)*<br>
 
 To calculate the total number of employees per department, I created another query for the table below.  This gives a more microscopic view of job vacancies that will be upcoming for each department.  The numbers per department looks a little less overwhelming.   There are a total of 34 job titles within the 9 departments that have upcoming retirees; the Development department leading with 194 Engineer positions that will be available in the near future.<br>
 ![total_per_dept](https://github.com/taranahassan/Pewlett_Hackard_Analysis/blob/main/Images/total_per_dept.png?raw=true). <br>
-**Schema for this table is [sample_query2.sql](https://github.com/taranahassan/Pewlett_Hackard_Analysis/blob/main/Queries/sample_query2.sql)**<br>
+*Schema for this table is [sample_query2.sql](https://github.com/taranahassan/Pewlett_Hackard_Analysis/blob/main/Queries/sample_query2.sql)*<br>
 
 Knowing there are 1549 total employees that are retiring and same number of new employees that need to be hired, parameters can be set for the mentorship eligibility.  Otherwise PH will have 3098 positions to fill; half the employees as replacements and the other half as part time mentorship.  Which would mean 1:1 for every new hire and mentor, assuming all retirees do want to take part in the mentorship program.  This would significantly increase payroll and other expenses within the company.  One criteria can be based on the number of positions an employee held during their tenure at PH.  This shows career growth, expertise and more experience within the retiree.  Positions held can be 2 or more based a specific department and requirements to fullfill the mentorship program.  Another criteria could be capping the number of mentorship positions per department.<br>
-![number_positions_per_retiree](https://github.com/taranahassan/Pewlett_Hackard_Analysis/blob/main/Images/number_positions_per_retiree.png?raw=true)
-**Schema for this table is [sample_query3.sql](https://github.com/taranahassan/Pewlett_Hackard_Analysis/blob/main/Queries/sample_query3.sql)**
+![number_positions_per_retiree](https://github.com/taranahassan/Pewlett_Hackard_Analysis/blob/main/Images/number_positions_per_retiree.png?raw=true)<br>
+*Schema for this table is [sample_query3.sql](https://github.com/taranahassan/Pewlett_Hackard_Analysis/blob/main/Queries/sample_query3.sql)*
